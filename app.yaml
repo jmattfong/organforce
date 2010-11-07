@@ -1,0 +1,17 @@
+application: organforce
+version: 1
+runtime: python
+api_version: 1
+
+handlers:
+- url: /stylesheets
+  static_dir: stylesheets
+  
+- url: /images
+  static_dir: images
+  
+- url: /yam
+  static_dir: yam
+
+- url: /.*
+  script: organforce.py

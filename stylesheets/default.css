@@ -1,0 +1,58 @@
+body {
+  	font-family: Helvetica, Verdana, Arial, sans-serif;
+    background: #FFFFFF url("../images/brain.png") no-repeat fixed 50% 0%;
+    margin: 0px;
+}
+#background{
+	height:100%;
+	width:920px;
+	position: fixed;
+	left:50%;
+	right:50%;
+  	margin-left: -460px;
+    background: black;
+    opacity: 0.75;
+    z-index: -1;
+}
+#main {
+    width:900px;
+    margin:0px auto 0px auto;
+    padding: 5px;
+}
+#header{
+	padding: 10px;
+}
+#header>a{
+	padding: 0px 20px;
+}
+#user{
+	float: right;
+	padding: 0px;
+	margin: 0px;
+	color: #7777FF;
+}
+#login{
+	float: right;
+}
+#comment{
+	color: white;
+}
+#author{
+	color: #7777FF;
+}
+#construction{
+	float: left;
+}
+p{
+	color: #999999;
+}
+h1{
+	color: white;
+}
+h2{
+	color: white;
+}
+a{
+    text-decoration: none;
+    color: #7777FF;
+}

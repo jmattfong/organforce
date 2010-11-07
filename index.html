@@ -1,0 +1,48 @@
+<html>
+<head>
+	<title>Organ Force</title>
+    <link type="text/css" rel="stylesheet" href="/stylesheets/default.css" />
+    <link rel="icon" type="image/vnd.microsoft.icon" href="images/favicon.gif">
+</head>
+
+  <body>
+  	<div id="background">
+  	</div>
+  	<div id="main">
+  		<div id="header">
+  			<a href="/">Home</a>
+			<a href="/apps">Apps</a>
+			<a href="/about">About</a>
+			<a href="/donate">Donate</a>
+			
+  			<a id="login" href="{{ url }}">{{ url_linktext }}</a>
+  			<p id="user">{{current_user}}</p>
+  		</div>
+  		<hr/>
+  		<h1>Organ Force</h1>
+  		<image src="images/construction.png" alt="Under Construction" id="construction"/>
+		<h2>Under Construction</h2>
+		<p>Hey! You made it here, way to go! Unfortunately, you've
+		caught us at a bad time. We're currently under construction,
+		but you can still download some of our apps. Check out the
+		"Apps" link  above, but keep in mind, they are under
+		construction too.<br/><br/>Stay cool,<br/>Organ Force</p>
+  		<hr/>
+  		<p>Leave a comment:</p>
+  		<form action="/sign" method="post">
+      		<div><textarea name="content" rows="3" cols="60"></textarea></div>
+      		<div><input type="submit" value="Comment"></div>
+    	</form>
+    	{% for greeting in greetings %}
+      		{% if greeting.author %}
+        		<p><b id="author">{{ greeting.author.nickname }}</b> wrote:</p>
+      		{% else %}
+       			<p>"Anonymous" wrote:</p>
+      		{% endif %}
+      		<blockquote id="comment">{{ greeting.content|escape }}</blockquote>
+    	{% endfor %}
+    </div>
+    
+  </body>
+  
+</html>
